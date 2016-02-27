@@ -5,6 +5,8 @@ defmodule ExIntercom.Mixfile do
     [app: :exintercom,
      version: "0.1.1",
      elixir: "~> 1.2",
+     description: description,
+     package: package,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      preferred_cli_env: [
@@ -33,5 +35,18 @@ defmodule ExIntercom.Mixfile do
     [{:poison, "~> 1.5 or ~> 2.0"},
      {:httpoison, "~> 0.8.0"},
      {:exvcr, "~> 0.7", only: :test}]
+  end
+
+  defp description do
+    """
+    Intercom client library.
+    """
+  end
+
+  defp package do
+    [# These are the default files included in the package
+     maintainers: ["Artyom Pertsovsky <artyom@pertsovsky.com>"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/ericmj/postgrex"}]
   end
 end
