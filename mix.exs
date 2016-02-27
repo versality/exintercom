@@ -36,7 +36,8 @@ defmodule ExIntercom.Mixfile do
      {:httpoison, "~> 0.8.0"},
      {:exvcr, "~> 0.7", only: :test},
      {:earmark, "~> 0.1", only: :dev},
-     {:ex_doc, "~> 0.11", only: :dev}]
+     {:ex_doc, "~> 0.11", only: :dev},
+     {:credo, "~> 0.3", only: [:dev, :test]}]
   end
 
   defp description do
