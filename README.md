@@ -1,6 +1,6 @@
 # ExIntercom
 
-Elixir binding for the Intercom API (https://api.intercom.io).
+Elixir library for the Intercom API (https://api.intercom.io).
 
 **Currently has very limited functionality with read-only access.**
 
