@@ -37,7 +37,8 @@ defmodule ExIntercom.Mixfile do
      {:exvcr, "~> 0.7", only: :test},
      {:earmark, "~> 0.1", only: :dev},
      {:ex_doc, "~> 0.11", only: :dev},
-     {:credo, "~> 0.3", only: [:dev, :test]}]
+     {:credo, "~> 0.3", only: [:dev, :test]},
+     {:inch_ex, "~> 0.5", only: :docs}]
   end
 
   defp description do

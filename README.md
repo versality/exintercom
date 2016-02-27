@@ -1,6 +1,8 @@
 # ExIntercom
 
-Elixir library for the Intercom API (https://api.intercom.io).
+[![Build Status](https://travis-ci.org/versality/exintercom.svg?branch=master)](https://travis-ci.org/versality/exintercom) [![Inline docs](http://inch-ci.org/github/versality/exintercom.svg?branch=master&style=flat)](http://inch-ci.org/github/versality/exintercom)
+
+Elixir library for the [Intercom API](https://api.intercom.io)
 
 **Currently has very limited functionality with read-only access.**
 
