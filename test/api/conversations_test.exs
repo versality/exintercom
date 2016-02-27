@@ -4,7 +4,6 @@ defmodule ExIntercom.ConversationsTest do
 
   test "getting list of conversations" do
     use_cassette "all_conversations" do
-      IO.inspect ExIntercom.Conversation.find_all
       assert ExIntercom.Conversation.find_all
     end
   end
