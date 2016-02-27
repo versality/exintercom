@@ -45,8 +45,8 @@ defmodule ExIntercom.Mixfile do
 
   defp package do
     [# These are the default files included in the package
-     maintainers: ["Artyom Pertsovsky <artyom@pertsovsky.com>"],
+     maintainers: ["Artyom Pertsovsky"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/ericmj/postgrex"}]
+     links: %{"GitHub" => "https://github.com/versality/exintercom"}]
   end
 end
