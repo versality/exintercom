@@ -1,4 +1,8 @@
 defmodule ExIntercom.Base do
+  @moduledoc """
+    Abstract module for Intercom API endpoints
+  """
+
   @items_per_page 20
 
   def request(url) do
@@ -6,8 +10,8 @@ defmodule ExIntercom.Base do
     response.body
   end
 
-  def paginate_params(endpoint, pages) do
-    endpoint <> "?per_page=#{@items_per_page}&page=#{pages}"
+  def paginate_params(endpoint, page_num) do
+    endpoint <> "?per_page=#{@items_per_page}&page=#{page_num}"
   end
 
   defp authenticate do

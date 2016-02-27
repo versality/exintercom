@@ -1,2 +1,0 @@
-defmodule ExIntercom do
-end

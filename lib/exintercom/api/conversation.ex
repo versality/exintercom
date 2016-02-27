@@ -1,6 +1,6 @@
 defmodule ExIntercom.Conversation do
   @moduledoc """
-    Wrapper around ExIntercom Conversations endpoint
+    Wrapper around Intercom Conversations endpoint
   """
 
   import ExIntercom.Base
@@ -24,7 +24,7 @@ defmodule ExIntercom.Conversation do
   end
 
   defp fetch(url) do
-    request(url) |> Poison.decode!
+    url |> request |> Poison.decode!
   end
 
   defp through_pages(0, tasks) do
@@ -33,7 +33,8 @@ defmodule ExIntercom.Conversation do
 
   defp through_pages(pages, tasks) do
     task = Task.async(fn ->
-      page_body = paginate_params(@endpoint, pages) |> fetch
+      url       = paginate_params(@endpoint, pages)
+      page_body = fetch(url)
       page_body["conversations"]
     end)
 

@@ -1,6 +1,6 @@
 defmodule ExIntercom.User do
   @moduledoc """
-    Wrapper around ExIntercom Users endpoint
+    Wrapper around Intercom Users endpoint
   """
 
   import ExIntercom.Base
