@@ -34,7 +34,9 @@ defmodule ExIntercom.Mixfile do
   defp deps do
     [{:poison, "~> 1.5 or ~> 2.0"},
      {:httpoison, "~> 0.8.0"},
-     {:exvcr, "~> 0.7", only: :test}]
+     {:exvcr, "~> 0.7", only: :test},
+     {:earmark, "~> 0.1", only: :dev},
+     {:ex_doc, "~> 0.11", only: :dev}]
   end
 
   defp description do
