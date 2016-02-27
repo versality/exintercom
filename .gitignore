@@ -1,7 +1,9 @@
+.DS_Store
 /_build
 /cover
 /deps
 erl_crash.dump
 *.ez
 /fixture/vcr_cassettes
-docs
+/docs
+/doc
