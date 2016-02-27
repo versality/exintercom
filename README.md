@@ -1,6 +1,6 @@
 # ExIntercom
 
-[![Build Status](https://travis-ci.org/versality/exintercom.svg?branch=master)](https://travis-ci.org/versality/exintercom) [![Inline docs](http://inch-ci.org/github/versality/exintercom.svg?branch=master&style=flat)](http://inch-ci.org/github/versality/exintercom)
+[![Build Status](https://travis-ci.org/versality/exintercom.svg?branch=master)](https://travis-ci.org/versality/exintercom) [![Inline docs](http://inch-ci.org/github/versality/exintercom.svg?branch=master&style=flat)](http://inch-ci.org/github/versality/exintercom) [![hex.pm version](https://img.shields.io/hexpm/v/exintercom.svg)](https://hex.pm/packages/exintercom)
 
 Elixir library for the [Intercom API](https://api.intercom.io)
 
