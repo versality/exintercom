@@ -11,14 +11,32 @@ defmodule ExIntercom.Base do
   end
 
   defp authenticate do
+    {intercom_app_id, intercom_app_key} = get_credentials
+
     [
       hackney: [
         basic_auth: {
-          Application.fetch_env!(:exintercom, :intercom_app_id),
-          Application.fetch_env!(:exintercom, :intercom_app_key)
+          intercom_app_id,
+          intercom_app_key
         }
       ]
     ]
+  end
+
+  defp get_credentials do
+    {
+      Application.get_env(
+        :exintercom,
+        :intercom_app_id,
+        System.get_env("INTERCOM_APP_ID")
+      ),
+
+      Application.get_env(
+        :exintercom,
+        :intercom_app_id,
+        System.get_env("INTERCOM_APP_KEY")
+      )
+    }
   end
 
   defp headers do
