@@ -45,10 +45,10 @@ http://hexdocs.pm/exintercom
 ## Usage
 
 ```elixir
-iex> ExIntercom.Conversations.find_all
+iex> ExIntercom.Conversation.find_all
 [%{"assignee" => %{"id" => "...", "type" => "..."}, ...]
 
-iex> ExIntercom.Conversations.find(id: "1")
+iex> ExIntercom.Conversation.find(id: "1")
 %{...}
 
 iex> ExIntercom.User.find(id: "1")
