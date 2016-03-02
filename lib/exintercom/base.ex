@@ -37,7 +37,7 @@ defmodule ExIntercom.Base do
 
       Application.get_env(
         :exintercom,
-        :intercom_app_id,
+        :intercom_app_key,
         System.get_env("INTERCOM_APP_KEY")
       )
     }
