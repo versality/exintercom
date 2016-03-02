@@ -3,7 +3,7 @@ defmodule ExIntercom.Mixfile do
 
   def project do
     [app: :exintercom,
-     version: "0.1.1",
+     version: "0.1.2",
      elixir: "~> 1.2",
      description: description,
      package: package,
