@@ -3,11 +3,12 @@ defmodule ExIntercom.Base do
     Abstract module for Intercom API endpoints
   """
 
+  alias ExIntercom.Auth
   @items_per_page 20
 
   def request(url) do
     {:ok, response} = HTTPoison.get(url, headers, authenticate)
-    response.body
+    ensure_auth(response)
   end
 
   def paginate_params(endpoint, page_num) do
@@ -27,5 +28,20 @@ defmodule ExIntercom.Base do
 
   defp headers do
     [{"accept", "application/json"}]
+  end
+
+  defp ensure_auth(response) do
+    body = response.body |> Poison.decode!
+
+    if Map.has_key?(body, "errors") do
+      errors      = body["errors"]
+      first_error = List.first(errors)
+
+      if first_error["message"] === "Unauthorized" do
+        raise "AuthError: #{first_error["code"]}"
+      end
+    end
+
+    response.body
   end
 end
