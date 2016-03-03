@@ -6,7 +6,7 @@ defmodule ExIntercom do
     https://developers.intercom.io/docs/api-summary#section-initiating-the-oauth-flow
   """
   @spec oauth_url(<<>>, <<>>) :: <<>>
-  def oauth_url(state, redirect_url) do
+  def oauth_url(redirect_url, state) do
     params = URI.encode_query(%{
       client_id: Auth.client_id,
       state: state,
