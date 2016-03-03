@@ -38,14 +38,25 @@ http://hexdocs.pm/exintercom
   end
   ```
 
-3. Add _Intercom_ `app_id` and `app_key` to `config.exs`:
+3. Add **Intercom** credentials to `config.exs`:
   ```elixir
   config :exintercom,
     app_id: "...",
     app_key: "..."
+    client_id: "..." # Optional, for OAuth only
+    client_secret: "..." # Optional, for OAuth only
     ```
 
-  If no config set, env variables will be used instead.
+  If no config set, env variables will be used instead with the following names:
+
+  ```bash
+  app_id        -> INTERCOM_APP_ID
+  app_key       -> INTERCOM_APP_KEY
+  client_id     -> INTERCOM_CLIENT_ID
+  client_secret -> INTERCOM_CLIENT_SECRET
+  ```
+
+4. Do `mix deps.get`
 
 
 ## Usage
@@ -59,4 +70,7 @@ iex> ExIntercom.Conversation.find(id: "1")
 
 iex> ExIntercom.User.find(id: "1")
 %{...}
+
+iex> ExIntercom.oauth_url("http://your_callback_url.com", "your_state")
+https://app.intercom.io/oauth?...
 ```
