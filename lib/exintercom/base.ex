@@ -1,16 +1,27 @@
 defmodule ExIntercom.Base do
   @moduledoc """
-    Abstract module for Intercom API endpoints
+  Abstract module for Intercom API endpoints
   """
 
   alias ExIntercom.Auth
   @items_per_page 20
 
+  @doc """
+  Performs request to specified Intercom endpoint with authentication.
+  Will raise an exception if credentials are invalid.
+
+  Returns undecoded body.
+  """
+  @spec request(<<>>) :: <<>>
   def request(url) do
     {:ok, response} = HTTPoison.get(url, headers, authenticate)
     ensure_auth(response)
   end
 
+  @doc """
+  Adds pagination to an endpoint.
+  """
+  @spec paginate_params(<<>>, <<>>) :: <<>>
   def paginate_params(endpoint, page_num) do
     endpoint <> "?per_page=#{@items_per_page}&page=#{page_num}"
   end

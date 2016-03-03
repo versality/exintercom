@@ -1,6 +1,6 @@
 defmodule ExIntercom.Conversation do
   @moduledoc """
-    Wrapper around Intercom Conversations endpoint
+  Wrapper around Intercom Conversations endpoint
   """
 
   import ExIntercom.Base
