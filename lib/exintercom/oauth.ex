@@ -1,11 +1,12 @@
 defmodule ExIntercom.OAuth do
   @moduledoc """
   Provides helper methods for Intercom OAuth
+
+  https://developers.intercom.io/docs/api-summary#section-initiating-the-oauth-flow
   """
 
   @doc """
     Returns OAuth URL
-    https://developers.intercom.io/docs/api-summary#section-initiating-the-oauth-flow
   """
   @spec uri :: <<>>
   def uri do
@@ -13,12 +14,11 @@ defmodule ExIntercom.OAuth do
       client_id: ExIntercom.Auth.client_id
     })
 
-    "https://app.intercom.io/oauth?#{params}"
+    url_with_params(params)
   end
 
   @doc """
-    Returns OAuth URL using redirect_url
-    https://developers.intercom.io/docs/api-summary#section-initiating-the-oauth-flow
+    Returns OAuth URL with redirect_url
   """
   @spec uri(<<>>) :: <<>>
   def uri(redirect_url) do
@@ -27,12 +27,11 @@ defmodule ExIntercom.OAuth do
       redirect_url: redirect_url
     })
 
-    "https://app.intercom.io/oauth?#{params}"
+    url_with_params(params)
   end
 
   @doc """
-    Returns OAuth URL using redirect_url and state
-    https://developers.intercom.io/docs/api-summary#section-initiating-the-oauth-flow
+    Returns OAuth URL with redirect_url and state
   """
   @spec uri(<<>>, <<>>) :: <<>>
   def uri(redirect_url, state) do
@@ -42,6 +41,10 @@ defmodule ExIntercom.OAuth do
       redirect_url: redirect_url
     })
 
+    url_with_params(params)
+  end
+
+  defp url_with_params(params) do
     "https://app.intercom.io/oauth?#{params}"
   end
 end

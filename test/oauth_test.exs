@@ -1,5 +1,5 @@
 defmodule ExIntercom.OAuthTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case, async: false
 
   setup do
     Application.put_env(:exintercom, :client_id, "789")
