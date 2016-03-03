@@ -10,12 +10,12 @@ Elixir library for the [Intercom API](https://api.intercom.io)
 
 - [x] Fetch conversations / conversation
 - [x] Fetch user
+- [x] OAuth
 - [ ] Fetch companies
 - [ ] Fetch admins
 - [ ] Fetch segments
 - [ ] Fetch leads
 - [ ] Fetch notes
-- [ ] OAuth
 
 ## Documentation
 
@@ -41,8 +41,8 @@ http://hexdocs.pm/exintercom
 3. Add _Intercom_ `app_id` and `app_key` to `config.exs`:
   ```elixir
   config :exintercom,
-    intercom_app_id: "...",
-    intercom_app_key: "..."
+    app_id: "...",
+    app_key: "..."
     ```
 
   If no config set, env variables will be used instead.
