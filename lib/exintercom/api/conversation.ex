@@ -8,7 +8,7 @@ defmodule ExIntercom.Conversation do
   @endpoint "https://api.intercom.io/conversations/"
 
   @doc """
-    Returns map of all conversations
+  Returns map of all conversations
   """
   @spec find_all :: [%{}, ...]
   def find_all do
@@ -16,7 +16,7 @@ defmodule ExIntercom.Conversation do
   end
 
   @doc """
-    Returns single conversation
+  Returns single conversation
   """
   @spec find([{:atom, integer}]) :: %{}
   def find(id: id) do

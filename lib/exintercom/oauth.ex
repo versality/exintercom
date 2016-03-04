@@ -6,7 +6,7 @@ defmodule ExIntercom.OAuth do
   """
 
   @doc """
-    Returns OAuth URL
+  Returns OAuth URL
   """
   @spec uri :: <<>>
   def uri do
@@ -18,7 +18,7 @@ defmodule ExIntercom.OAuth do
   end
 
   @doc """
-    Returns OAuth URL with redirect_url
+  Returns OAuth URL with redirect_url
   """
   @spec uri(<<>>) :: <<>>
   def uri(redirect_url) do
@@ -31,7 +31,7 @@ defmodule ExIntercom.OAuth do
   end
 
   @doc """
-    Returns OAuth URL with redirect_url and state
+  Returns OAuth URL with redirect_url and state
   """
   @spec uri(<<>>, <<>>) :: <<>>
   def uri(redirect_url, state) do
