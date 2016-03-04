@@ -12,6 +12,10 @@ defmodule ExIntercom.User do
   """
   @spec find([id: <<>>]) :: %{}
   def find(id: id) do
-    request(@endpoint <> to_string(id))
+    fetch(@endpoint <> to_string(id))
+  end
+
+  defp fetch(url) do
+    url |> request |> Poison.decode!
   end
 end
