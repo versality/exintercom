@@ -11,8 +11,8 @@ Elixir library for the [Intercom API](https://api.intercom.io)
 - [x] Fetch conversations / conversation
 - [x] Fetch user
 - [x] OAuth
+- [x] Fetch admins
 - [ ] Fetch companies
-- [ ] Fetch admins
 - [ ] Fetch segments
 - [ ] Fetch leads
 - [ ] Fetch notes
