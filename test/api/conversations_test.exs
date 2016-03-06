@@ -1,4 +1,4 @@
-defmodule ExIntercom.ConversationsTest do
+defmodule ExIntercom.ConversationTest do
   use ExUnit.Case
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
