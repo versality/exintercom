@@ -28,7 +28,7 @@ defmodule ExIntercom.Conversation do
   end
 
   defp through_pages(0, tasks) do
-    Enum.reduce(tasks, &(Task.await(&1) ++ &2))
+    Enum.reduce(tasks, [], &(Task.await(&1) ++ &2))
   end
 
   defp through_pages(pages, tasks) do
